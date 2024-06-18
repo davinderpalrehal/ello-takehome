@@ -1,0 +1,117 @@
+/**
+NOTE: There are a couple of places I have used `!important` I don't really like the approach
+but in the interest of time I didn't really dig further into how to get rid of the importants
+ */
+
+.book-card {
+  .MuiCardHeader {
+    &-root {
+      background: #cffafa;
+
+      &.reading-level-A,
+      &.reading-level-B,
+      &.reading-level-C {
+        background: #f76434;
+
+        .MuiCardHeader-title,
+        .MuiCardHeader-subheader {
+          color: #ffffff;
+        }
+      }
+
+      &.reading-level-D,
+      &.reading-level-E,
+      &.reading-level-F,
+      &.reading-level-G,
+      &.reading-level-H,
+      &.reading-level-I {
+        background: #fabd33;
+
+        .MuiCardHeader-subheader {
+          color: #000000;
+        }
+      }
+
+      &.reading-level-J,
+      &.reading-level-K,
+      &.reading-level-L,
+      &.reading-level-M,
+      &.reading-level-N,
+      &.reading-level-O,
+      &.reading-level-P {
+        background: #cffafa;
+      }
+
+      &.reading-level-Q,
+      &.reading-level-R,
+      &.reading-level-S,
+      &.reading-level-T,
+      &.reading-level-U,
+      &.reading-level-V,
+      &.reading-level-W,
+      &.reading-level-X,
+      &.reading-level-Y {
+        background: #4aa088;
+      }
+    }
+
+    &-title {
+      height: 65px;
+      overflow: clip;
+    }
+
+    &-subheader {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: bold;
+      text-align: right;
+      color: #4aa088;
+
+      &:before {
+        content: 'by ';
+        text-transform: lowercase;
+        font-family: cursive;
+      }
+    }
+  }
+
+  &--small {
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      background: #ffe6dc;
+      width: 100%;
+      height: 10px;
+      z-index: -1;
+      top: -8px;
+    }
+
+    &-title {
+      height: 45px;
+      font-weight: bolder !important;
+      overflow: clip;
+      color: #335c6e;
+    }
+
+    &-author {
+      text-transform: uppercase;
+      font-size: 0.7em !important;
+      text-align: right;
+      padding-top: 1.4em;
+    }
+
+    &-bookmark {
+      fill: #f76434 !important;
+      stroke: #ffffff;
+      margin-left: -15px;
+    }
+  }
+}
+
+.book-card--bookmark {
+  fill: #f76434 !important;
+  stroke: #ffffff;
+}
